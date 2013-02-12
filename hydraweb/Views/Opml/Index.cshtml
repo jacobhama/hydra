@@ -1,0 +1,16 @@
+﻿@model List<hydra.Models.ProgramCategory>
+@{
+    Layout = null;
+}
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+  <head>
+      <title>SR OPML Directory</title>
+  </head>
+    <body>
+@foreach(var category in Model)
+{        
+        <outline text="@category.name" URL="srdm.azurewebsites.net/opml/?categoryid=@category.id" type="playlist" />
+}
+    </body>
+</opml>
